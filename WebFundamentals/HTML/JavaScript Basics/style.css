@@ -1,0 +1,103 @@
+/*---------------------------- CSS ALL PAGE ---------------------------*/
+
+html{
+	background-color: #092d55;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+#container{
+	width: 970px;
+}
+
+h1, h2, p{
+	color: #bcd2e7;
+}
+
+li,a{
+	color: #2bd8e1;
+}
+
+span{
+	color: #6b87ff;
+}
+
+/*---------------------------- HEADER ---------------------------*/
+
+header{
+	background-color: #db3136;
+	border-radius: 20px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+header h1, #home, footer p{
+	margin-left: 10px
+}
+
+/*---------------------------- NAV ------------------------------*/
+nav{
+	background-color: #007a88;
+	display: inline-block;
+	padding: 20px;
+	margin: 20px 20px 0px 10px;
+	width: 170px;
+	border-radius: 20px;
+}
+
+nav ul{
+	margin-left: 27px;
+}
+
+nav li{
+	font-size: 13px;
+	padding: 1px;
+}
+.sublist{
+	margin-left: 20px;
+}
+
+/*---------------------------- #MAIN DIV ------------------------*/
+
+#main{
+	background-color: #050c14;
+	display: inline-block;
+	width: 646px;
+	vertical-align: top;
+	padding: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+
+#main p{
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+#main ul{
+	margin-left: 20px;
+}
+#main li{
+	margin-bottom: 7px;
+}
+
+.inline{
+	display: inline;
+}
+
+h2{
+	margin-bottom: 10px;
+}
+
+/*---------------------------- FOOTER ------------------------*/
+
+footer{
+	background-color: #565f6d;
+	margin-left: 10px;
+	padding: 15px;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
