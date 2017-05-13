@@ -1,0 +1,154 @@
+*{
+	padding: 0;
+	margin: 0;
+	/*border: 1px red dashed;*/
+}
+
+#container{
+	margin:0 auto;
+	width: 1200px;
+
+}
+
+main{
+	background: radial-gradient(#6f5964, #1a0a0e)
+	
+}
+/*----------------------------------------- HEADER-----------------------------------------------------*/
+header, main {
+	padding: 21px;
+}
+header{
+	height: 50px;
+	background: linear-gradient(#f1f1f1, #f8f8f8 , #f1f1f1);
+	font-family: arial;
+}
+
+.motto{
+	display: inline-block;
+	font-size: 30px;
+}
+.name{
+	display: inline-block;
+	font-family: "Comic Sans MS";
+	margin-right: 420px;
+	font-size: 36px
+}
+
+/*---------------------------------------------- ABOUT ---------------------------------------------------------*/
+
+#profile_pic{
+	width:550px;
+	border: 8px solid silver;
+	display: inline-block;
+	margin-right: 21px;
+
+}
+
+#about{
+	display: inline-block;
+	vertical-align: top;
+	width: 559px;
+	height: 377px;
+}
+
+.info-background{
+	background: linear-gradient(to right, #fefefe, #dbccda);
+}
+
+.headline{
+	height: 40px;
+	background: linear-gradient(#b3b3b6, #868492, #b3b3b6);
+	color: #FFF;
+	font-size: 28px;
+	font-weight: bold;
+	font-family: Arial;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.description{
+	
+	font-family: Arial;
+	padding: 15px 15px;
+	font-size: 19px;
+	line-height: 23px;
+}
+
+#about a{
+	display: block;
+	color: black;
+	padding-bottom: 
+}
+
+/*-------------------------------------------------------- PROJECT ------------------------------------------------*/
+.project{
+	display: inline-block;
+	width: 367px;
+	margin-top: 21px;
+	margin-right: 21px;
+	vertical-align: top;
+}
+.project:last-child{
+	margin-right: 0;
+}
+.project-img{
+	width: 100%;
+}
+.project p{
+	padding-top: 5px;
+}
+.justify{
+	text-align:justify;
+	height: 235px;
+	padding-bottom:0;
+	font-family: Arial;
+	font-size: 19px;
+	padding: 0 15px;
+}
+.technologies{
+	font-size: 16px;
+	padding: 15px 0 0 15px;
+	height:35px;
+}
+
+.tech-badges{
+	height: 53px;
+	width: 53px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+button{
+	margin: 0 auto;
+	display:block;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	box-shadow:3px 3px 3px gray;
+	background-color: #407d61;
+	color: white;
+	font-family: arial;
+}
+
+/*------------------------------------------------- FOOTER --------------------------------------------------*/
+footer{
+	text-align: center;
+	margin: 10px 0;
+	font-family: arial;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+footer p{
+	margin-bottom: 15px;
+
+}
+footer img{
+	height: 30px;
+	width: 30px;
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+
