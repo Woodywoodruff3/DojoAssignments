@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	color: white;
+	font-family: arial;
+}
+#container{
+	width: 970px;
+	background: linear-gradient(#074c6f, #076fa3);
+	margin:0 auto;
+}
+
+#fontsize{
+	display: block;
+	position: relative;
+	width: 175px;
+	left: 760px;
+	top: 18px;
+	font-size: 12px;
+}
+span a{
+	color: yellow;
+}
+img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 400px;
+	clear: both;
+}
+/*-------------------------------------------------------- #SEARCH --------------------------------------------*/
+#search{
+	display: inline-block;
+	background-color: #444444;
+	padding: 15px 30px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px black;
+	margin-left: 230px;
+}
+input{
+	padding: 10px;
+	text-align: center;
+	color: gray;
+
+}
+
+button{
+	margin-left: 5px;
+	padding:8px;
+	border-radius: 5px;
+	background-color: #074c6f;
+	color: white;
+}
+
+/*---------------------------------- Top Nav bar below --------------------------------------------------*/
+nav{
+	margin: 0 auto;
+	width: 850px;
+	height: 40px;
+	background: linear-gradient(#0b71a4, #2f7ca4, #0b71a4);
+	box-shadow: 2px 2px 2px black;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.header{
+	color: white;
+	text-decoration: none;
+	font-size: 19px;
+	line-height: 40px;
+	text-align: center;
+	padding: 0px 25px;
+}
+
+ul{
+	width: 200px;
+	display: inline-block;
+	margin-top: 35px;
+	margin-left: 85px;
+	text-align: center;
+	list-style-type: none;
+}
+.links a {
+	color: white;
+	margin-bottom: 5px;
+
+}
+.links{
+	padding-bottom: 11px;
+}
+#info{
+	width: 620px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	text-align: center;
+
+}
+.links:before {
+		 content: "\00BB \0020";
+		 color: yellow;
+}
+.info-paragraph{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.zen{
+	color: yellow;
+	font-style: italic;
+	margin-bottom: 15px;
+}
+
+/*---------------------------------- #About --------------------------------------------------*/
+#about{
+	width: 970px;
+	background-color: white;
+	box-shadow: 0px -2px 2px black;
+	margin-top: 20px;
+	padding-top: 15px;
+}
+#gettingstarted{
+	width:385px;
+	display: inline-block;
+	margin-right: 30px;
+	margin-left: 85px;
+	color: black;
+	text-align: center;
+	font-size: 14px;
+	border-top: 4px solid #5ea1ce;
+	
+}
+
+#applications{
+	width:385px;
+	display: inline-block;
+	color: black;
+	text-align: center;
+	font-size: 14px;
+	border-top: 4px solid #5ea1ce;
+	vertical-align: top;
+}
+
+h3{
+	width:299px;
+	margin-top :10px;
+	margin-bottom: 10px;
+	text-align: center;
+	margin-left: 20px;
+}
+
+#gettingstarted p, #applications p{
+	width: 299px;
+	text-align: center;
+	margin-left: 20px;
+}
+
+#applications span{
+	font-size: 12px;
+	color: #5ea1ce ;
+}
+
+#gettingstarted ul, #applications ul{
+	list-style: square;
+	font-size: 14px;
+	margin-left: 0px;
+	text-align: center;
+	width: 250px;
+	margin-top: 3px;
+}
+
+#gettingstarted li, #applications li{
+	margin-bottom: 5px;
+}
+
+#gettingstarted a, #applications a{
+	text-decoration: none;
+	color: #5ea1ce;
+}
+
+/*---------------------------------- footer --------------------------------------------------*/
+footer{
+	padding-top: 60px;
+	text-align: center;
+	opacity: 0.5;
+}
+footer span{
+	padding-right: 60px;
+	font-size: 16px;
+}
+#last{
+	padding-right: 0;
+}
+
+footer p{
+	font-size: 10px;
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+
