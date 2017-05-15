@@ -1,0 +1,146 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#container{
+	width: 970px;
+	margin: 0 auto;
+	background-color: #d9dcd1;
+	font-family: Lucida, arial;
+	padding-top: 1px;
+	font-size: 14px;
+	padding-bottom: 8px;
+}
+
+/*------------------HEADER ----------------------------*/
+.header-footer, .header-img {
+	background-color: #00aba8;
+}
+header, #whatisgit, main, #git-info, footer{
+	margin:15px;
+}
+header img{
+	width: 50px;
+	margin: 8px; 
+	background-color: aqua;
+	vertical-align: middle;
+}
+
+header p{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24px;
+	font-weight: bold;
+}
+#header-links{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 200px;
+	
+}
+header a{
+	display: inline-block;
+	color: white;
+	margin-right: 10px;
+}
+
+main{
+	background-color: #fee395;
+	color: white;
+}
+.info-background{
+	background-color: #004043;
+}
+
+/*------------------ #whatisgit ---------------------*/
+#whatisgit{
+	display: inline-block;
+	width: 250px;
+	padding-bottom: 52px;
+	margin-right: 20px;
+}
+
+.sidebar-heading{
+	font-size: 20px;
+	margin: 10px 0px 15px 8px;
+}
+.sidebar-info {
+	margin-left: 16px;
+	padding-right: 20px;
+}
+
+#git-info{
+	display: inline-block;
+	width:621px;
+	vertical-align: top;
+}
+/*------------------ #git-info-------------------------*/
+.main-heading{
+	font-size: 15px;
+	font-weight: bold;
+	margin: 10px 0px 15px 8px;
+}
+
+.display-inline{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+#gitinit, #gitadd, #gitstatus{
+	width: 175px;
+	height: 164px;
+	margin: 0px 20px 10px 20px;
+	padding-right: 35px;
+}
+
+#gitinit{
+	margin-left: 0;
+}
+#gitstatus{
+	margin-right: 0;
+}
+#gitadd{
+	padding-bottom: 10px;
+}
+
+.main-info{
+	margin-left: 16px;
+}
+
+.main-aqua{
+	color:#00aba8; 
+}
+
+#gitcommit, #gitremoteadd{
+	width: 283px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+#gitcommit{
+	margin-right: 20px;
+}
+#gitremoteadd{
+	margin-left: 20px;
+}
+
+#gitpush{
+	width: 610px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	padding-right: 35px;
+}
+
+/*------------------ footer ----------------------*/
+footer{
+	width: 940px;
+	height: 80px;
+	vertical-align: middle;
+	text-align: center;
+}
+footer p{
+	padding-top: 32px;
+}
