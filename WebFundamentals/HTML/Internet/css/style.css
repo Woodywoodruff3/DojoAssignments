@@ -1,0 +1,248 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#container{
+	width: 970px;
+	margin: 0 auto;
+	font-family: arial;
+}
+
+/*------------------- SHARED CLASSES ---------------*/
+
+.sidebar-blue, .main-blue{
+	color: #005e95;
+}
+
+/*------------------------- HEADER ------------------*/
+
+header{
+	width: 970px;
+}
+
+header img{
+	width: 100px;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+}
+
+#heading{
+	font-size: 48px;
+	vertical-align: middle;
+}
+
+#net{
+	color: #005e95;
+}
+
+header p{
+	width: 950px;
+	color: white;
+	background: linear-gradient(#005e95, #4080a4, #005e95);
+	font-size: 36px;
+	padding: 8px 0px;
+	position: absolute;
+	top: 85px;
+	padding-left: 20px;
+}
+
+/*------------------------- SIDEBAR ------------------*/
+
+#sidebar{
+	margin-top: 43px;
+	width: 200px;
+	display: inline-block;
+	margin-right: 60px;
+}
+
+#sidebar p{
+	padding-top: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#red{
+	color: red;
+}
+
+#smaller-text{
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.sidebar-button{
+	width: 200px;
+	display: block;
+	text-align: center;
+	color: white;
+	padding: 8px 0px;
+	border-radius: 10px;
+}
+
+#watch{
+	background: linear-gradient(#4080a4, #005e95);
+	margin-bottom: 3px;
+}
+
+#resources{
+	background: linear-gradient(#f5bf85, #ff7107);
+	margin-bottom: 20px;
+}
+
+#picture{
+	margin-top: 20px;
+	background-image: url(../img/ad_background.png);
+	width: 200px;
+	padding-bottom: 30px;
+}
+
+#picture p{
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 18px;
+	font-weight: normal;
+	padding-top: 20px;
+}
+
+#ninja{
+	width: 80px;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 20px;
+}
+
+#learn-more{
+	color: white;
+	display: block;
+	width: 180px;
+	padding: 8px;
+	border-radius: 10px;
+	background: linear-gradient(#58ccda, #00bdd8);
+	margin: 0 auto;
+}
+
+#first{
+	opacity: .3;
+}
+
+#second{
+	opacity: .6
+}
+
+/*------------------------- MAIN --------------------*/
+
+main{
+
+	margin-top: 43px;
+	vertical-align: top;
+	width: 700px;
+	display: inline-block;
+	font-size: 14px;
+}
+
+#home{
+	width: 20px;
+	vertical-align: top;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.dns{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 13px;
+}
+
+#phone{
+	width: 40px;
+	display: inline-block;
+	margin-left: 450px;
+	vertical-align: top;
+	margin-top: 8px;
+}
+
+#number-ul{
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+
+#number-ul li{
+	list-style: none;
+}
+
+.little-info{
+	font-size: 9px;
+}
+
+#number{
+	font-size: 24px
+}
+
+.main-bold{
+	font-weight: bold;
+}
+
+.main-aqua{
+	color: #0dddf1;
+}
+
+.heading {
+	font-size: 20px;
+	padding: 8px 0px;
+}
+
+#main-ul, #main-ol{
+	margin: 5px;
+	margin-left: 37px;
+	margin-bottom: 10px;
+}
+
+#main-ul li, #main-ol li{
+	margin-bottom: 5px;
+}
+
+#clientserver{
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+}
+
+/*------------------------- BIGTHREE ------------------*/
+
+#bigthree{
+	margin-top: 15px;
+	border-top: 4px solid #005e95;
+	border-left: 4px solid #005e95;
+	border-right: 4px solid #005e95;
+	display: inline-block;
+	box-shadow: 5px 0 5px -3px gray;
+}
+
+#bigthreeimg{
+	width: 120px;
+	margin: 10px;
+	display: inline-block;
+}
+
+#bigthreewriting{
+	margin-top: 10px;
+	display: inline-block;
+	width: 500px;
+	margin-right: 8px;
+	vertical-align: top;
+	margin-bottom: 5px;
+}
+
+#bigthree p{
+	margin-top: 5px;
+}
+
+#bigthreeitalic{
+	font-style: italic;
+}

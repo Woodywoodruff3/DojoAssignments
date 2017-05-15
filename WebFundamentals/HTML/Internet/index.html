@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Internet</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	</head>	
+	<body>
+		<div id="container">
+			<header>
+				<img id="globe" src="./img/globe.png" alt="globe"><span id="heading">The Inter<span id="net">net</span></span>
+				<p>The World Wide Web</p>
+			</header>
+			<div id="sidebar">
+				<p>So, what's an <span id="red">Internet?</span></p>
+				<p id="smaller-text">An <span class="sidebar-blue">Inter</span>connected <span class="sidebar-blue">Net</span>work of computers all around the world!</p>
+				<button id="watch" class="sidebar-button">WATCH A VIDEO</button>
+				<button id="resources" class="sidebar-button">MORE RESOURCES</button>
+				<hr>
+
+				<div id="picture">
+					<p>Reinvent your career in just 14 weeks</p>
+					<img id="ninja" src="./img/ninja.png" alt="ninja">
+					<button id="learn-more">Learn More <span id="first">></span><span id="second">></span><span id="third">></span></button>
+				</div> <!--/picture -->
+			</div> <!--/sidebar-->
+			<main>
+				<img src="./img/home.png" id="home" alt="home">
+				<p class="main-blue main-bold dns">DNS</p>
+				<img src="./img/phone.png" id="phone" alt="phone">
+				<ul id="number-ul">
+					<li class="little-info">Mon - Fri 9 a.m. - 5:00 p.m. (EST)</li>
+					<li id="number" class="main-aqua main-bold">855.967.3787</li>
+					<li class="little-info">International +1.617.963.0555</li>
+				</ul>
+				<hr>
+				<p class="main-blue heading main-bold">Client and Servers</p>
+				<p>Computers connected to the <span class="main-aqua">Web </span>are called <span class="main-bold">clients </span> and <span class="main-bold">servers.</span></p>
+				<ul id="main-ul">
+					<li><span class="main-auqa">Clients</span> are the typical Web user's Internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and <span class="main-aqua">Web-accessing software</span> available on those devices (usually a web browser like Firefox or Chrome).</li>
+					<li><span class="main-auqa">Servers</span> are computer that store <span class="main-aqua">webpages</span> ,<span class="main-aqua">sites</span> ,or <span class="main-aqua">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser.</li>
+				</ul>
+				<img id="clientserver" src="./img/client_server.jpg" alt="clientserver">
+				<p class="main-blue heading main-bold">So What Actually Happens?</p>
+					<ol id="main-ol">
+						<li>The browser goes to the <span class="main-aqua">DNS server</span> and finds the real address of the <span class="main-aqua">server</span> that the website lives on.</li>
+						<li>The browser sends an <span class="main-aqua">HTTP request</span> message to the server asking it to send a copy of the website to the client.</li>
+						<li>If the server approves the client's request, the server send the client a <span class="main-aqua">"200 OK" message</span>, which means "Permission granted! Here you go!", and then starts sending the website's files to the browser as a series of small chunks.</li>
+						<li>The browser assembles the small chunks into a complete website and displays it to you!</li>
+					</ol>
+
+				<div id="bigthree">
+					<img src="./img/html.png" alt="bigthree" id="bigthreeimg">
+					<div id="bigthreewriting">
+						<h3 class="main-blue">The Big 3 - HTML, CSS, JavaScript</h3>
+						<p class="bigthreep">While the server can process information in many different languages, the files that they server to the client are <span id="bigthreeitalic">always</span> going to be some combination of HTML, CSS, and JavaScript!</p>
+						<p>Learn more about the big 3 <a href="#" class="main-aqua">here</a>!</p>
+					</div>
+				</div> <!--/bigthree-->
+			</main>
+		</div> <!--/container-->
+	</body>
+</html>
