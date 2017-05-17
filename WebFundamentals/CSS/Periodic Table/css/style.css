@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: arial;
+}
+
+table { 
+	empty-cells: show;
+	display: inline-block;
+}
+
+td:nth-child(2){
+	cell: 5px;
+}
+
+td{
+	border: 1px solid black;
+	text-align: center;
+	width:51px;
+	height: 51px;
+}
+
+.number, .mass{
+	font-size: 12px;
+}
+
+.element{
+	font-size: 18px;
+	font-weight: bold;
+	color: #000061;
+}
+
+.no-border{
+	border: none;
+}
+
+.blue{
+	background-color: #689bff;
+}
+
+.pink{
+	background-color: #fd9a98;
+}
+
+.yellow{
+	background-color: #fecb00
+}
+
+.green{
+	background-color: #1fca21;
+}
+
+.red{
+	color: red;
+}
+
+#btm-elements{
+	margin-left: 41px;
+}
+
+.special{
+	text-align: right;
+}
