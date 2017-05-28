@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function slotMachine(number,coins){
+			var bank = 5;
+			while(bank > 0){
+			var randomNumber = Math.floor(Math.random() * 100);
+			console.log(randomNumber);
+			var randomCoins = Math.floor((Math.random()*50)+50);
+			var userRandom = Math.floor(Math.random() * 100);
+				if(number == randomNumber){
+					bank--;
+					bank += bank + randomCoins;
+					console.log("Your Number was " + number + ". Slot Machine number was " + randomNumber+ ". You have won " + randomCoins + "! ");
+				}
+
+				else if (bank === coins){
+					console.log("You have reached your limit.  Thanks for playing");
+				}
+				else if(userRandom === randomNumber){
+					bank--;
+					bank += bank + randomCoins;
+					console.log("Random Number was " + userRandom + ". Random Slot Machine Number was " + randomNumber + ".");
+					console.log("You were randomly selected " + userRandom + " and won!");
+				}
+				else if(number !== randomNumber){
+					bank--;
+
+					console.log("Your number didnt win you have " + bank + " quarters in your bank account");
+				}
+				else
+				{
+					bank--;
+					console.log("You have " + bank + " amount in your Bank Account!");
+
+				}
+				
+			}
+			console.log("You have lost all your money!")
+		}
+		slotMachine(4,4);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
