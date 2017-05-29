@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.red{
+			color: red;
+		}
+
+		#fadeIn, #show, #slideDown{
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			margin-top: 23px;
+		}
+		#fadeIn{
+			background-color: blue;
+		}
+		#show{
+			background-color: red;
+
+		}
+		#slideDown{
+			background-color: green;
+		}
+	
+		.block{
+			display: block;
+		}
+		
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$('document').ready(function(){
+			$("#btnAddClass").click(function(){
+				$("#addClassP").addClass("red");
+				$("#btnAddClass").css("width", "400px");
+				console.log($("#btnAddClass").val());
+			});
+			$("#fadeIn").hide();
+			$("#show").hide();
+			$("#slideDown").hide();
+			$("#btnSlideToggle").click(function(){
+				$("#imgSlideToggle").slideToggle(900, function(){
+				});
+
+			});
+			$("#btnFadeShow").click(function(){
+				$("#fadeIn").fadeIn(900, function(){
+				});
+				$("#btnFadeShow").hide();
+				$("#show").show();
+				$("#fadeOut").fadeOut(900, function(){
+				});
+				$("#slideDown").slideDown(900, function(){
+				});
+				$("#btnSlideToggle").addClass("block");
+			});
+			
+			$("#btnAppend").click(function(){
+				$("#slideUp").slideUp("slow", function(){
+				});
+				$("#append h1").append("<strong> Changed! </strong>");
+				$("#slideUp").before("<h4>New heading<h4>");
+				$("#slideUp").after("<h4>New heading after!</h4>");
+				$('#append p').html("<b>Woah</b> This is crazy!");
+				$("#text").text("<b>Some</b> new text.")
+				$( "div" ).data( "test", { first: 16, last: "pizza!" } );
+				$( "span:first" ).text( $( "div" ).data( "test" ).first );
+				$( "span:last" ).text( $( "div" ).data( "test" ).last );
+				console.log($("#append input").attr("type"));
+			});
+		})
+	</script>
+	</head>
+	<body>
+		<div id="addClass">
+			<h1>Add Class</h1>
+			<input type = "button" value="Add Class" id="btnAddClass"></input>
+			<p id = "addClassP">Click the button to add class "red" to this paragraph</p>
+		</div>
+		<div id="slideToggle">
+			<h1>Slide Toggle</h1>
+			<input type = "button" value="Fade In and Show Images" id="btnFadeShow"></input>
+			<input type = "button" value="Slide Toggle Image" id="btnSlideToggle"></input>
+			<p id="fadeOut">Click the button to slidetoggle a hidden image</p>
+			<img id="fadeIn"></img>
+			<img id="show"></img>
+			<img id="slideDown"></img>
+			
+			<img id="imgSlideToggle" src="capture.jpg" alt="" width="100" height="123"></img>
+		</div>
+		<div id="append">
+			<h1>Append</h1>
+			<input type = "button" value="Append" id="btnAppend"></input>
+			<p id="slideUp">Click the button to append a new paragraph!</p>
+			<p></p>
+			<p id="text"></p>
+				<div>
+ 					The values stored were
+ 					<span></span>
+  					and
+  					<span></span>
+				</div>
+		</div>
+
+	</body>
+</html>

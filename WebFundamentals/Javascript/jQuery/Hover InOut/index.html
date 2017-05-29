@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				width: 239px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$('document').ready(function(){
+				$('img').hover(function swap(){
+					newSrc = $(this).attr('data-alt-src');
+            		$(this).attr('data-alt-src', $(this).attr('src'));
+            		$(this).attr('src', newSrc);
+				}, function(){
+				$newSrc = $(this).attr('src');
+            		$(this).attr('src', $(this).attr('data-alt-src'));
+            		$(this).attr('data-alt-src', newSrc);;
+			});
+			});
+
+		</script>
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<img src="codercat.jpg" data-alt-src="coder2.jpg"></img>
+					</td>
+					<td>
+						<img src="codercat.jpg" data-alt-src="coder2.jpg"></img>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="codercat.jpg" data-alt-src="coder2.jpg"></img>
+					</td>
+					<td>
+						<img src="codercat.jpg" data-alt-src="coder2.jpg"></img>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

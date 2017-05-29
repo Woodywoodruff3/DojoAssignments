@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<meta charset = "utf-8">
+		<title></title>
+		<style>
+			td{
+				height: 200px;
+				width: 200px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$("document").ready(function(){
+				$("img").click(function(){
+					$(this).hide();
+				});
+				$("#restore").click(function(){
+					$("img").show();
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - assignment 1</h1>
+		<table>
+			<tbody>
+				<tr>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+				</tr>
+				<tr>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+					<td><img src="ninja.jpg" alt="ninja"></img></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" value = "Restore" id="restore"></input>
+	</body>
+</html>
