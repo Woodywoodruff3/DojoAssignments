@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<title></title>
+		<style>
+			table{
+				width: 700px;
+			}
+			thead tr{
+				border: 1px solid black;
+				font-weight: bold;
+			}
+			h1{
+				margin-bottom: 0px;
+				font-size: 2.5em;
+			}
+			form{
+				width: 400px;
+				text-align: right;
+				border-top: 4px solid gray;
+				padding-top: 30px;
+			}
+			input{
+				display:inline-block;
+				margin-left: 3px;
+				margin-bottom: 10px;
+			}
+			#submit{
+				display: block;
+				margin-top: 30px;
+				margin-left: 328px;
+
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$('document').ready(function(){
+				$('#submit').click(function(){
+					$('table tbody').append('<tr><td>' + $("#firstName").val() + '</td><td>' + $("#lastName").val() + '</td><td>' + $("#email").val() + '</td><td>' + $("#contact").val() + '</td><tr>');
+					$("#firstName").val($("#firstName").attr('value'));
+					$("#lastName").val($("#lastName").attr('value'));
+					$("#email").val($("#email").attr('value'));
+					$("#contact").val($("#contact").attr('value'));
+					return false;
+				})
+			})
+
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Email Address</td>
+					<td>Contact #</td>
+				<tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+
+		<h1>Add User</h1>
+		<form action='process.php' method='post'>
+			First Name:<input type="text"  value="First Name" name='first_name' id="firstName"><br>
+			Last Name:<input type="text" value="Last Name" name='last_name' id="lastName"><br>
+			Email Address:<input type="text" value="Email Address"name='email' id="email"><br>
+			Contact No.:<input type="text" value="Phone #" name='contact' id="contact"><br>
+			<input type='submit' value='Add User' id="submit">
+		</form>
+	</body>
+	</html>

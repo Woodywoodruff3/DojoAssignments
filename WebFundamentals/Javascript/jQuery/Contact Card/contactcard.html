@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = 'utf-8'>
+		<title>Contact Card</title>
+		<style>
+			form{
+				width: 200px;
+				display: inline-block;
+			}
+			#userDescription{
+				width: 173px;
+				height: 200px;
+			}
+
+			#addUser{
+				display: block;
+			}
+
+			#contacts{
+				display: inline-block;
+				width: 300px;
+				vertical-align: top;
+				margin-left: 60px;
+				text-align: center;
+			}
+
+			.contactCard{
+				width: 300px;
+				height: 120px;
+				border: 2px solid black;
+			}
+
+			.descriptionpara{
+				font-size: 20px;
+			}
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		function description(){
+			$(".contactCard").click(function(){
+				$(this).html($('div').data('descript'));
+			});
+			
+		}
+		$(document).ready(function(){
+			$(document).on('click','#addUser',function(){
+				
+				$('div').data("fname", $('#firstName').val())
+				$('div').data("lname", $('#lastName').val())
+				$('div').data("descript", $('#userDescription').val())
+				$('#contacts').append('<div class="contactCard"><h1>' + $('div').data("fname") + " " + $('div').data("lname") + '</h1><p> Click to See Description!<p></div>');
+				console.log($('div').data("fname") + " " + $('div').data("lname") + " " + $('div').data("descript"));
+				description();
+				return false;
+			});	
+		});
+		</script>
+	</head>
+	<body>
+		<form action="process.php" method="post">
+			First Name: <input type="text" name="first_name" id="firstName"><br>
+			Last Name: <input type="text" name="last_name" id="lastName"><br>
+			Description:<br>
+			<textarea value="Enter Description" name="description" id="userDescription"></textarea>
+			<input type="submit" value="Add User" name="submit" id="addUser">
+		</form>
+		<div id='contacts'>
+		</div>
+	</body>
+</html>
