@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Game of Thrones API</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('#houseDetails').hide();
+			$(document).on('click', 'img', function(){
+				$.get('https://www.anapioficeandfire.com/api/houses/'+$(this).attr('id'), function(data){
+					$('#houseDetails').show();
+					var html_str="";
+					html_str += '<h4>House Details</h4>';
+					html_str += '<p><b>Name:</b> '+data.name+'</p>';
+					html_str += '<p><b>Words:</b> '+data.words+'</p>';
+					html_str += '<p id="titles"><b>Titles:</b> '
+					for(var i = 0; i< data.titles.length; i++){
+						if(i === data.titles.length - 1){
+						html_str += '<span>'+data.titles[i]+'</span>';
+						}
+						else
+						{
+						html_str += '<span>'+data.titles[i]+', </span>'
+						}
+					}
+					html_str += '</p>'
+					$('#houseDetails').html(html_str);
+
+				}, 'json');
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="houseImages">
+				<img src="logo.jpg" alt='logo' id="logo">
+				<img src="stark.jpg" class="house" alt='stark' id="362">
+				<img src="targaryen.jpg" class="house" alt='targaryen' id="378">
+				<img src="lannister.jpg" class="house" alt='lannister' id="229">
+				<img src="baratheon.png" class="house" alt='baratheon' id="17">
+			</div>
+			<div id="houseDetails"></div>
+		</div>
+	</body>
+</html>

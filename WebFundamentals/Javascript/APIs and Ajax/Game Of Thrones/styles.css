@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background-color: #000000;
+}
+
+#container{
+	width: 1000px;
+	margin: 0 auto;
+	font-family: Helvetica;
+}
+.house {
+	width: 235px;
+	height: 237px;
+	margin:20px 5px 50px;
+}
+.house:hover{
+	box-shadow: 3px 3px 3px #fdfdb9;
+}
+#logo{
+	width: 500px;
+	display: block;
+	margin: 0 auto;
+}
+
+#houseImages{
+	text-align: center;
+}
+
+#houseDetails{
+	border: 3px solid #fdfdb9;
+	width: 410px;
+	margin-top: 50px;
+	padding: 50px;
+	margin: 0 auto;
+}
+h4{
+	margin-top: -60px;
+	padding: 0 5px;
+	background-color: #000000;
+	width: 106px;
+	margin-bottom:20px;
+	color:#fdfdb9;
+
+}
+
+p{
+	line-height: 30px;
+	color: #ef7f28;
+}
+
+
+

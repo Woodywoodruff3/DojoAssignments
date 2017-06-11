@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = 'utf-8'>
+	<title>Pokedex</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		#pokemon{
+			width: 750px;
+			display: inline-block;
+		}
+
+		#pokedexInfo{
+			width: 300px;
+			height: 450px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			margin-left: 50px;
+			margin-top: 40px;
+			border-top: 30px solid red;
+			border-right: 30px solid red;
+			border-bottom: 40px solid red;
+			border-left: 30px solid red;
+		}
+
+		ul{
+			list-style-type: none;
+			padding-left: 0;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		h3{
+			margin: 15px 0px;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			for (var i = 1; i < 152; i++){
+				$('#pokemon').append('<img id='+i+ ' src="http://pokeapi.co/media/img/'+i+'.png">');
+				
+			};
+			$(document).on('click', 'img', function(){
+				//Get request to Api, clicking on coresponding img
+				$.get('http://pokeapi.co/api/v2/pokemon/' + $(this).attr('id'), function(data){
+					console.log(data);
+					//Create Pokedex web interface
+					var pokedexImg = "";
+					var html_str ="";
+					pokedexImg +=  '<img src="http://pokeapi.co/media/img/'+data.id+'.png">';
+					//adding name and Types
+					html_str += '<h1>'+data.name+'</h1>';
+					html_str += '<h3>Types</h3>';
+					html_str += '<ul>';
+					//Some Pokemon have more than 2 types
+					for(var i = 0; i < data.types.length; i++){
+						html_str += '<li>'+data.types[i].type.name+'</span></li>';
+					}
+
+					html_str += '</ul>';
+					html_str += '<h3>Height</h3><p>'+data.height+'</p>';
+					html_str += '<h3>Weight</h3><p>'+data.weight+'</p>';
+					//adding to Pokedex
+					$('#pokedexInfoImg').html(pokedexImg);
+					$('#pokedexInfoStats').html(html_str);
+				}, 'json');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="pokemon"></div>
+		<div id="pokedexInfo">
+			<div id="pokedexInfoImg"></div>
+			<div id="pokedexInfoStats"></div>
+		</div>
+	</div>
+
+</body>
+</html>

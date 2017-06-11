@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+	<head>
+		<meta charset = 'utf-8'>
+		<title>Weather App</title>
+		<style>
+			*{
+				margin: 0;
+				padding:0;
+			}
+
+			#container{
+				width: 960px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			h1{
+				padding-top: 30px;
+				margin-bottom: 20px;
+			}
+
+			#weatherResults{
+				margin-top: 40px;
+			}
+
+
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+
+			$('form').submit(function() {
+        // your code here (build up your url)
+        	var location = $('#weatherSearch').val();
+        	var appid = '92aa9bc67f77a5fa90f01a314f5ce333';
+        $.get('http://api.openweathermap.org/data/2.5/weather?q='+location+'&units=imperial&&appid='+appid, function(data) {
+            // your code here
+            var farenheight = Math.round(data.main.temp);
+
+            $('#weatherResults').html('<h1>'+data.name+', '+data.sys.country+'</h1><h3>Current Tempature</h3><h3>'+farenheight+'° F</h3>')
+        }, 'json');
+        // don't forget to return false so the page doesn't refresh
+        return false;
+    });
+});		
+
+
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>Coding Dojo Weather App</h1>
+			<form action="process.php" method="post">
+				<input type="text" name="weatherSearch" id="weatherSearch">
+				<input type="submit" value="Search">
+			</form>
+			<div id="weatherResults">
+			</div>
+		</div>
+	</body>
+</html>

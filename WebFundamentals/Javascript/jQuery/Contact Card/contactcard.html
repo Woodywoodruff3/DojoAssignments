@@ -45,28 +45,44 @@
 			
 		}
 		$(document).ready(function(){
-			$(document).on('click','#addUser',function(){
-				
-				$('div').data("fname", $('#firstName').val())
-				$('div').data("lname", $('#lastName').val())
-				$('div').data("descript", $('#userDescription').val())
-				$('#contacts').append('<div class="contactCard"><h1>' + $('div').data("fname") + " " + $('div').data("lname") + '</h1><p> Click to See Description!<p></div>');
-				console.log($('div').data("fname") + " " + $('div').data("lname") + " " + $('div').data("descript"));
-				description();
-				return false;
-			});	
+							//handle form submission
+				$('form').submit(function(e){})			
+				e.preventDefault();
+				//get the data from the form
+				var user = {
+					first: $('input[name=first]').val()),
+					last:  $('input[name=last]').val()),
+					about: $('input[name=about]').val()
+				}
+				//Creat a new contact card
+				var htmlString = "<div id='card'><h1>" + user.first + ' ' + "</h1><p>Click for Description</p>
+			<p style='display: none;'>" + user.about + "</p></div>"
+				//put contact card into page
+
+				//clear the forms contents
+				$('input[name=first]').val('');
+				$('input[name=last]').val('');
+				$('input[name=about]').val('');
 		});
+
+				$("#card-holder").on('click', '.card-holder',function(){
+				$(this).children().toggle();
+				})
 		</script>
 	</head>
 	<body>
 		<form action="process.php" method="post">
-			First Name: <input type="text" name="first_name" id="firstName"><br>
-			Last Name: <input type="text" name="last_name" id="lastName"><br>
+			First Name: <input type="text" name="first_name" value="" id="firstName"><br>
+			Last Name: <input type="text" name="last_name" value="" id="lastName"><br>
 			Description:<br>
-			<textarea value="Enter Description" name="description" id="userDescription"></textarea>
-			<input type="submit" value="Add User" name="submit" id="addUser">
+			<input type = "text area" value="" name="about" id="userDescription"></textarea>
+			<input type="submit" value="Add User">
 		</form>
-		<div id='contacts'>
+		<div id="card-holder">
+			<div class="card">
+			<h1>Bob Ross</h1>
+			<p>Click for Description</p>
+			<p style="display:none;">Awesome</p>
 		</div>
 	</body>
 </html>
