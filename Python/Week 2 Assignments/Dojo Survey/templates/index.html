@@ -3,17 +3,17 @@
 		<title>Dojo Survey</title>
 	</head>
 	<body>
-		<form action='/results' method='post'>
+		<form action="{{ url_for('results') }}" method="post">
 			Your Name: <input type='text' name='name'><br>
-			Dojo Location: <select>
-								<option value='sanjose'name='location'>San Jose</option>
-								<option value='seattle' name='location'>Seattle</option>
-								<option value='chicago' name='location'>Chicago</option>
+			Dojo Location: <select name='location'>
+								<option value='San Jose'>San Jose</option>
+								<option value='Seattle'>Seattle</option>
+								<option value='Chicago'>Chicago</option>
 							</select></br>
-			Favorite Language:	<select>
-									<option value='javascript' name='language'>JavaScript</option>
-									<option value='python' name='language'>Python</option>
-									<option value='Ruby' name='language'>Ruby on Rails</option>
+			Favorite Language:	<select name='language'>
+									<option value='JavaScript'>JavaScript</option>
+									<option value='Python'>Python</option>
+									<option value='Ruby on Rails'>Ruby on Rails</option>
 								</select></br>
 
 			Comment (optional):
