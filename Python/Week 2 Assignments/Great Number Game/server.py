@@ -17,7 +17,7 @@ def index():
     		random()
     	else:
         	pass
-    	return render_template('index.html')
+    	return render_template('index.html', number = session['random'])
 
 @app.route('/submit', methods=['POST'])
 def submit():
