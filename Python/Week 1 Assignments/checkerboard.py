@@ -1,8 +1,11 @@
-row1 = "* * * * "
-row2 = " * * * *"
-x = 0
+def checkerboard(size):
+	space = 1
+	while space <= size:
+		if space % 2 == 0:
+			print "* * * * "
+			space += 1
+		else:
+			print " * * * *"
+			space += 1
 
-while x < 11:
-	print row1
-	print row2
-	x +=1
+checkerboard(20)

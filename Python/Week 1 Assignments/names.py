@@ -5,8 +5,8 @@ students = [
      {'first_name' : 'KB', 'last_name' : 'Tonel'}
 ]
 
-for i in students:
-	print i['first_name'], i['last_name']
+for data in students:
+	print data["first_name"], data["last_name"]
 
 users = {
  'Students': [
@@ -21,9 +21,10 @@ users = {
   ]
  }
 
-for key, data in users.items():
+for key,data in users.items():
 	print key
-	y = 1
+	num = 1
 	for value in data:
-		print str(y)+" - "+str(value['first_name']).upper(),str(value['last_name']).upper()+" - "+ str(len(value['first_name'])+len(value['last_name']))
-		y = y+1
+		print num,"-",value["first_name"],value['last_name'],"-",len(value["first_name"])+len(value["last_name"])
+		num +=1
+
