@@ -1,0 +1,54 @@
+#name{
+	margin-left: 58px;
+	margin-bottom: 10px;
+}
+
+#location{
+	margin-left: 38px;
+	margin-bottom: 10px;
+}
+
+#language{
+	margin-left: 10px;
+}
+.dropdown{
+	width: 173px;
+}
+
+#comment_box{
+	width:312px;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+#submit{
+	margin-left: 254.5px;
+	background-color: #83c1f7;
+	color: white;
+	font-weight: bold;
+}
+h2{
+	text-decoration: underline;
+}
+#span_name{
+	margin-left: 120px
+}
+
+#span_location{
+	margin-left: 66px
+}
+
+#span_language{
+	margin-left: 39px
+}
+
+#span_comments{
+	margin-left: 95px
+}
+
+button{
+	margin-left: 254.5px;
+	background-color: #83c1f7;
+	color: white;
+	font-weight: bold;
+}
