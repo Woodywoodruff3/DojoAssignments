@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+	<h1>Counter</h1>
+	{% if session['count'] == 1%}
+		<p>Welcome, this is your first time here</p>
+		{% else %}
+		<p>You have been here {{session['count']}} times</p>
+	{% endif %}
+	<form action='/addtwo' method="post">
+		<button>Add Two</button>
+	</form>
+	<form action='/clear' method='post'>
+		<button>Clear</button>
+	</form>
+</body>
+</html>
