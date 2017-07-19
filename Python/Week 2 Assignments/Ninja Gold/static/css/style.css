@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#container{
+	width: 1200px;
+	margin: 0 auto;
+}
+#results{
+	margin-top: 50px;
+}
+
+#farm, #cave, #house, #casino{
+	width: 250px;
+	height: 200px;
+	display: inline-block;
+	border: 2px solid black;
+	text-align: center;
+	padding-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 57px;
+}
+
+#casino{
+	margin-right: 0px;
+}
+
+h1{
+	margin-bottom: 20px
+}
+
+form{
+	margin-top: 25px;
+}
+
+#activities p{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+ul{
+	list-style-type: none;
+	height: 200px;
+	overflow: auto;
+}
+
+.earn{
+	color: green;
+}
+
+.lost{
+	color: red;
+}
