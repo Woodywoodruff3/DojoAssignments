@@ -1,0 +1,3 @@
+CREATE SCHEMA `my_sql_workbench_setup` ;
+
+USE my_sql_workbench_setup;
