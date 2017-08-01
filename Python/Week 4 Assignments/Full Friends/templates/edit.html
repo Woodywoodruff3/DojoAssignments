@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Edit Friend</title>
+</head>
+<body>
+
+	{% for single in edituser %}
+	
+	<h3> You are updating {{single["first_name"]}} {{single["last_name"]}}'s information</h3>
+
+		<form action='/friends/{{single["id"]}}' method='post'>
+			<label for="first_name">First Name:</label>
+			<input type='text' name='first_name' value = '{{single["first_name"]}}'>
+			<label for = "last_name">Last Name:</label>
+			<input type='text' name='last_name' value = '{{single["last_name"]}}'>
+			<label for = "email">Email:</label>
+			<input type='text' name='email' value = '{{single["email"]}}'>
+			<input type='Submit' value="Submit">
+		</form>
+
+	{% endfor%}
+
+</body>
+</html>
