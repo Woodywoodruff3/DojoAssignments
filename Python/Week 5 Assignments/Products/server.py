@@ -16,9 +16,9 @@ class product(object):
         self.price = taxed + self.price
         return self
     
-    def returned(reason):
+    def returned(self, reason):
         if reason == "defective":
-            self.status = "defective"
+            self.status = "Defective"
             self.price = 0
             return self
         elif reason == "returned_box":
@@ -30,6 +30,7 @@ class product(object):
             self.price = self.price - discount
             return self
         else:
+            print "If returning please use 'defective', 'returned_box', 'opened_box'"
             return self
     
     def display_info(self):
@@ -38,4 +39,4 @@ class product(object):
 
 iphone = product(850, "Iphone", "2lbs", "Apple", 100)
 
-iphone.tax().display_info()
+iphone.returned("opened_box").display_info()
