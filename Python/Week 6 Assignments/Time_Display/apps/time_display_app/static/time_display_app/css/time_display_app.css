@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#heading, #date {
+    border: 2px black solid;
+    margin: 0 auto;
+    text-align: center;
+    
+    
+}
+#heading{
+  width: 300px;
+  margin-top: 15px;
+  padding: 20px;  
+}
+#date{
+    width: 500px;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
