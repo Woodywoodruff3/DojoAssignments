@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Dojo Survey Index</title>
+	
+</head>
+<body>
+    <h2>Submitted Info</h2>
+    <p>You have submitted the form {{request.session.total}} times!</p> 
+
+	<p>Name:<span id='span_name'>{{ name }}</span></p>
+	<p>Dojo Location:<span id="span_location">{{ location }}</span></p>
+	<p>Favorite Language:<span id='span_language'>{{ language }}</span></p>
+	<p>Comment:<span id='span_comments'>{{ comments }}</span></p>
+
+	<a  href="/"><button id='button'>Go Back</button></a>
+
+</body>
+</html>
