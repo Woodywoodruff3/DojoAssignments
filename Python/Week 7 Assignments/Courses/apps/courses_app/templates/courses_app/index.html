@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a student to all bootcamp courses</title>
+</head>
+<body>
+    <h1>Add a new course</h1>
+    <form action="/add_course" method='post'>
+        {% csrf_token %}
+        <label for='name'>Name:</label>
+        <input type="text" name="name">
+        <label for='desc'>Description</label>
+        <input type="textarea" name="desc" id="desc">
+        <input type="submit" value="Add">
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <p color='red'>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <h1>Courses</h1>
+    <table>
+        <thead>
+            <td>Course Name</td>
+            <td>Description</td>
+            <td>Date Added</td>
+            <td>Actions</td>
+        </thead>
+        <tbody>
+        {% for courses in course %}
+            <tr>
+                <td>{{courses.course}}</td>
+                <td></td>
+                <td>{{courses.created_at}}</td>
+                <td><a href="/courses/destroy/{{courses.id}}">remove</a></td>
+            </tr>
+        {% endfor %}
+            
+        </tbody>
+
+
+    </table>
+</body>
+</html>
