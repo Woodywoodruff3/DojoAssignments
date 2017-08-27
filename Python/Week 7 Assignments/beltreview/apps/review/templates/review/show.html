@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" 
+        crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'review/css/style.css' %}">
+        <title>Add a Book</title>
+    </head>
+
+<body>
+    <div class="container">
+        <p><a href="/books">Home</a> | <a href="/logout">Logout</a></p>
+        <h2>{{book.title}}</h2>
+        <h4>Author: {{book.author}}</h4>
+
+        <div id = "book_reviews">
+           <h2>Reviews</h2>
+           {% for review in reviews%}
+           <hr>
+            <p>Rating: {{review.rating}}</p>
+            <p><a href='users/{{review.reviewer.id}}'>{{review.reviewer.name}}</a> says: {{review.review}}</p>
+            <p>Posted on {{review.created_at}}
+            {% if request.session.id == review.reviewer.id %}
+                <a href='/books/remove/{{review.reviewer.id}}'>Remove this Review</a>
+            {% endif %}
+            </p>    
+           {% endfor%} 
+        </div>
+    </div>
+
+</body>
+</html>
